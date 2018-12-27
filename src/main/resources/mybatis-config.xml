@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration SYSTEM "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	<properties resource="resource/mysql.properties" />
+	<typeAliases>
+		<typeAlias type="beans.domain.Login" alias="Login" />
+		<typeAlias type="beans.domain.Pattern" alias="Pattern" />
+		<typeAlias type="beans.domain.Customer1" alias="Customer" />
+	</typeAliases>
+</configuration>
