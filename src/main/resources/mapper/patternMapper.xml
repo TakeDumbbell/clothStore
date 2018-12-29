@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="beans.mapper.PatternMapper">
+
+	<resultMap type="Pattern" id="baseResultMap">
+		<id column="patternId" property="patternId"></id>
+		<result column="patternDes" property="patternDes" />
+		<result column="discountId" property="discountId" />
+		<result column="styleId" property="styleId" />
+		<result column="classifyId" property="classifyId" />
+		<result column="price" property="price" />
+		<result column="ageId" property="ageId" />
+		<result column="materialId" property="materialId" />
+		<result column="sleeveId" property="sleeveId" />
+		<result column="pantsId" property="pantsId" />
+		<result column="plantId" property="plantId" />					
+	</resultMap>
+	
+	
+	<select id="getPatternList" resultMap="baseResultMap">
+		select * from pattern
+	</select>
+</mapper>

@@ -12,6 +12,5 @@
 
 	<!-- 打开注解开关：可以通过注解生成对象、注入对象 -->
 	<context:annotation-config/>
-	<context:component-scan base-package="beans.mapper,beans.service,
-		servlets"></context:component-scan>
+	<context:component-scan base-package="cn.jxufe.chy.mapper,cn.jxufe.chy.service.impl,cn.jxufe.chy.controller"></context:component-scan>
 </beans>

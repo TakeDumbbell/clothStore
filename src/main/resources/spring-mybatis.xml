@@ -32,13 +32,13 @@
 		<!-- 设置mybatis的配置文件 -->
 		<property name="configLocation" value="classpath:mybatis-config.xml"></property>
 		<property name="dataSource" ref="dataSource"></property>
-		<property name="typeAliasesPackage" value="beans.domain"></property>
+		<property name="typeAliasesPackage" value="cn.jxufe.chy.domain"></property>
 		<property name="mapperLocations" value="classpath:mapper/*.xml"></property>
 	</bean>
 	<!-- 配置映射文件扫描器 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"> </property>
-		<property name="basePackage" value="beans.mapper"></property>
+		<property name="basePackage" value="cn.jxufe.chy.mapper"></property>
 	</bean>
 
 	<!-- 添加注解式事务处理，通过注解进行事务处理 -->

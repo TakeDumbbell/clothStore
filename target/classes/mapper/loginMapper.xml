@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper SYSTEM "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.jxufe.chy.mapper.LoginMapper">
+
+	<resultMap type="Login" id="baseResultMap">
+	<id column="account" property="account"></id>
+	<result column="password" property="password" />
+	</resultMap>
+	
+	<insert id="addCustomer">
+		insert into customer1(customerId,customerName,sex,telephone,email,address,zip,password) 
+		values(#{customerId},#{customerName},#{sex},#{telephone},#{email},#{address},#{zip},#{password})
+	</insert>
+
+	<select id="isExistsAccount" resultType="boolean" >
+		select count(*) from customer1 where customerId=#{customerId}
+	</select>
+	
+	<select id="getPassword" resultType="String">
+		select password from customer1 where customerId=#{customerId}
+	</select>
+	
+	<select id="getCustomerList" resultMap="baseResultMap">
+		select * from customer1
+	</select>
+	
+	<select id="getCustomer" resultMap="baseResultMap">
+		select * from customer1 where customerId=#{customerId}
+	</select>
+</mapper>
